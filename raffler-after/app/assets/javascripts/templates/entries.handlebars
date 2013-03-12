@@ -1,0 +1,12 @@
+{{view Raffler.NewEntryView}}
+<ul>
+  {{#each controller}}
+    <li>
+      {{name}}
+      {{#if winner}}
+        <span {{bindAttr class="winner highlight"}}>WINNER</span>
+      {{/if}}
+    </li>
+  {{/each}}
+</ul>
+<button {{action drawWinner}} {{bindAttr disabled="allWinners"}}>Draw Winner</button>
